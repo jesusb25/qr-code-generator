@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <div class="card-header">
+        <h1 class="card-title">QR Code Generator</h1>
+        <p class="card-description">Enter a URL to generate a QR code</p>
+      </div>
+
+      <div class="card-content">
+        <form id="qrForm" class="form-group">
+          <div class="form-group">
+            <label for="url">Please enter link for QR-Code:</label>
+            <input
+              type="text"
+              id="url"
+              placeholder="https://example.com"
+              value=""
+            />
+          </div>
+          <button type="submit" class="button button-primary">
+            Generate QR Code
+          </button>
+        </form>
+
+        <div id="qrDisplay" class="qr-code-display" style="display: none">
+          <div class="qr-code-container">
+            <canvas id="qr-code"></canvas>
+          </div>
+          <button id="downloadQr" class="button button-download">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Save as PNG
+          </button>
+        </div>
+
+        <div id="message" class="message" style="display: none"></div>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
