@@ -28,9 +28,6 @@ Turn any link into a scannable QR code in seconds.
 - jQuery
 - [QRious](https://github.com/neocotic/qrious)
 
-## Why This Project Is Cool
-It solves a real problem with a simple UI: quick, no-login QR code creation you can use for portfolios, events, menus, flyers, and more.
-
 ## Future Ideas
 - Custom QR colors
 - Different QR sizes
